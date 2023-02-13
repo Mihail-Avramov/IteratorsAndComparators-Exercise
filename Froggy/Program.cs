@@ -1,10 +1,15 @@
-﻿namespace Froggy
+﻿using System;
+using System.Linq;
+
+namespace Froggy
 {
-    internal class Program
+    public class StartUp    
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            Lake stones = new Lake(Console.ReadLine().Split(", ").Select(int.Parse).ToList());
+
+            Console.WriteLine(string.Join(", ", stones));
         }
     }
 }
